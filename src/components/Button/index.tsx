@@ -1,5 +1,3 @@
-import { Container } from './styles';
-
 import theme from '../../assets/styles/themes/default';
 
 interface ButtonProps {
@@ -11,6 +9,8 @@ interface ButtonProps {
   height?: 'SM' | 'MD' | 'LG';
 }
 
+import { Container } from './styles';
+
 export function Button({
   title,
   icon,
@@ -19,12 +19,10 @@ export function Button({
   width = 'SM',
   height = 'SM'
 }: ButtonProps) {
-
-  console.log(width);
   return (
     <Container
       type='button'
-      bg={bg === 'secondary' ? theme.colors.yellow : theme.colors.red}
+      bg={bg === 'secondary' ? theme.colors.yellow : theme.colors.red[100]}
       color={color === 'secondary' ? theme.colors.brown[700] : '#fff'}
       width={width === 'MD'
         ? theme.button_size.width.MD

@@ -5,6 +5,7 @@ import defaultTheme from '../../assets/styles/themes/default';
 
 import { Header } from '../Header';
 import { Home } from '../Home';
+import { Offers } from '../Offers';
 import { MainContainer } from './styles';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <MainContainer>
         <Home />
+        <Offers />
       </MainContainer>
     </ThemeProvider>
   );

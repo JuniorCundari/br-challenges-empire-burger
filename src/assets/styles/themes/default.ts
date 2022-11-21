@@ -10,7 +10,10 @@ export default {
       200: '#c9b29d',
       100: '#FAE2CB'
     },
-    red: '#F43127',
+    red: {
+      900: 'rgba(29, 6, 5, 0.2)',
+      100: '#F43127'
+    },
     yellow: '#F59A1B'
   },
 
