@@ -10,9 +10,6 @@ export const Container = styled.section`
   .banner {
     position: relative;
     left: 0;
-    width: 100%;
-    /* max-width: 1920px;
-    max-height: 1200px; */
   }
 `;
 

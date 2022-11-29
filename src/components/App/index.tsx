@@ -5,6 +5,7 @@ import defaultTheme from '../../assets/styles/themes/default';
 
 import { Header } from '../Header';
 import { Home } from '../Home';
+import { MenuBurger } from '../MenuBurger';
 import { Offers } from '../Offers';
 import { MainContainer } from './styles';
 
@@ -16,6 +17,7 @@ function App() {
       <MainContainer>
         <Home />
         <Offers />
+        <MenuBurger />
       </MainContainer>
     </ThemeProvider>
   );

@@ -8,7 +8,7 @@ import { SpecialOffers } from '../SpecialOffers';
 import { Subtitle } from '../Subtitle';
 import { InfoIcon } from '../InfoIcon';
 
-import { Container, OpeningHours } from './styles';
+import { Container, HashtagSocialMedia, OpeningHours } from './styles';
 import { DescriptionService } from '../DescriptionService';
 
 export function Offers() {
@@ -50,10 +50,15 @@ export function Offers() {
         />
         <DescriptionService
           title="Horário de funcionamento"
-          description="Segunda a sexta: 17h00 - 23h00  Sabado a Domíngo: 18h30 - 23h00"
+          description="Segunda a sexta: 17h00 - 23h00 | Sábado a Domíngo: 18h30 - 23h00"
           color="secondary"
         />
       </OpeningHours>
+
+      <HashtagSocialMedia>
+        <p className="hashtag-title">Não esqueça de marcar a gente no Instagram:</p>
+        <span className="hashtag-empireburger">#empireburger</span>
+      </HashtagSocialMedia>
     </Container>
   );
 }

@@ -25,3 +25,20 @@ export const OpeningHours = styled.section`
     border-left: 1px solid rgba(29, 6, 5, 0.4);
   }
 `;
+
+export const HashtagSocialMedia = styled.div`
+  margin: 64px 0;
+  text-align: center;
+
+  .hashtag-title {
+    color: ${({ theme }) => theme.colors.brown[800]};
+    font-size: 18px;
+  }
+
+  .hashtag-empireburger {
+    font-family: 'Lilita One';
+    color: ${({ theme }) => theme.colors.red[100]};
+    font-size: 41px;
+    text-transform: uppercase;
+  }
+`;

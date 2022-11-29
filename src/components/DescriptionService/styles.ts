@@ -11,6 +11,5 @@ export const Container = styled.div`
 
   p {
     color: ${(props) => props.color};
-    opacity: 0.6;
   }
 `;

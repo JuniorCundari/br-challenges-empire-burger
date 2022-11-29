@@ -9,7 +9,10 @@ export function Subtitle({title, description }: SubtitleProps) {
   return (
     <Container>
       <h2>{title}</h2>
-      <p>{description}</p>
+      {description === ''
+        ? null
+        : <p>{description}</p>
+      }
     </Container>
   );
 }
