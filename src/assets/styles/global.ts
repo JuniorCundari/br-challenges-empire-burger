@@ -11,6 +11,8 @@ export default createGlobalStyle`
     background: ${({ theme }) => theme.colors.background};
     font-size: 16px;
     font-family: 'Lato', 'Lilita One', sans-serif, cursive;
+
+    overflow-x: hidden;
   }
 
   button {

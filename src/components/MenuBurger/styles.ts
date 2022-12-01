@@ -1,38 +1,32 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  /* position: relative; */
-  /* width: 100vw; */
+  position: relative;
 `;
 
 export const Wrapper = styled.div`
   position: relative;
-  /* width: 100%; */
+  width: 100vw;
 
   .banner {
-    /* position: absolute;
-    z-index: -1;
-    left: -24px; */
     width: 100%;
-    max-width: 428px;
+    max-width: 600px;
   }
 `;
 
 export const ContainerMenuBurgerTitle = styled.div`
   padding-top: 40px;
-  /* padding-left: 24px;
-  padding-right: 24px; */
+  padding-left: 24px;
+  padding-right: 24px;
+  position: absolute;
+  top: 0;
 
   div + button {
     margin-top: 16px;
-    margin-bottom: 39px;
   }
 `;
 
 export const ContainerMenuList= styled.div`
-  /* position: absolute;
-  left: -24px;
-  right: -24px; */
   background: ${({ theme }) => theme.colors.brown[500]};
   padding: 0 24px;
   padding-bottom: 50px;
@@ -90,8 +84,23 @@ export const ItemTitle = styled.div`
 `;
 
 export const ContainerAttendance = styled.div`
-  img {
+  padding: 0 24px;
+  margin-top: 48px;
+
+  .card-banner {
     width: 100%;
     max-width: 570px;
+  }
+`;
+
+export const ContainerTitleAttendance = styled.div`
+  padding: 0 24px;
+  margin-top: 16px;
+
+  border-bottom: 1px solid rgba(29, 6, 5, 0.15);
+
+  div + button {
+    margin-top: 8px;
+    margin-bottom: 64px;
   }
 `;

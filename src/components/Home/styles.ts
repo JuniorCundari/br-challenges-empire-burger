@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
+  position: relative;
 
   .banner {
-    position: relative;
-    left: 0;
+    width: 100vw;
+    max-width: 900px;
   }
 `;
 

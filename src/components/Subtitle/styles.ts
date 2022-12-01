@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 380px;
-  width: 100%;
-
   h2 {
     color: ${({ theme }) => theme.colors.brown[900]};
     text-transform: uppercase;

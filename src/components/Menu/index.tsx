@@ -46,8 +46,8 @@ export function Menu({ open, setOpen }: MenuMobileProps) {
         <Button
           title="Contato"
           icon={whatsapp}
-          bg="secondary"
-          color="secondary"
+          bg="third"
+          color="third"
         />
       </ul>
     </Container>

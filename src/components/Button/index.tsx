@@ -3,8 +3,8 @@ import theme from '../../assets/styles/themes/default';
 interface ButtonProps {
   title: string;
   icon?: string;
-  bg?: 'primary' | 'secondary';
-  color?: 'primary' | 'secondary';
+  bg?: 'primary' | 'secondary' | 'third';
+  color?: 'primary' | 'secondary' | 'third';
   width?: 'SM' | 'MD' | 'LG';
   height?: 'SM' | 'MD' | 'LG';
 }
@@ -22,8 +22,18 @@ export function Button({
   return (
     <Container
       type='button'
-      bg={bg === 'secondary' ? theme.colors.yellow : theme.colors.red[100]}
-      color={color === 'secondary' ? theme.colors.brown[700] : '#fff'}
+      bg={bg === 'third'
+        ? theme.colors.yellow
+        : bg === 'secondary'
+          ? theme.colors.brown[100]
+          : theme.colors.red[100]
+      }
+      color={color === 'third'
+        ? theme.colors.brown[700]
+        : color === 'secondary'
+          ? theme.colors.red[100]
+          : '#fff'
+      }
       width={width === 'MD'
         ? theme.button_size.width.MD
         : width === 'LG'

@@ -50,7 +50,7 @@ export function Offers() {
         />
         <DescriptionService
           title="Horário de funcionamento"
-          description="Segunda a sexta: 17h00 - 23h00 | Sábado a Domíngo: 18h30 - 23h00"
+          description="Segunda a sexta: 17h00 - 23h00 Sábado a Domíngo: 18h30 - 23h00"
           color="secondary"
         />
       </OpeningHours>

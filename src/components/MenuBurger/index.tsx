@@ -5,7 +5,7 @@ import bannerMenuMobile from '../../assets/images/banner-menu-mobile.png';
 import bannerMenu from '../../assets/images/banner-menu.png';
 import cardWomanEating from '../../assets/images/card-woman-eating.png';
 
-import { Container, ContainerMenuBurgerTitle, ContainerMenuList, Item, MenuList, Wrapper, ItemTitle, ContainerAttendance } from './styles';
+import { Container, ContainerMenuBurgerTitle, ContainerMenuList, Item, MenuList, Wrapper, ItemTitle, ContainerAttendance, ContainerTitleAttendance } from './styles';
 
 export function MenuBurger() {
   return (
@@ -69,7 +69,20 @@ export function MenuBurger() {
       </ContainerMenuList>
 
       <ContainerAttendance>
-        <img src={cardWomanEating} alt="" />
+        <img className="card-banner" src={cardWomanEating} alt="Mulher comendo um lanche" />
+        <ContainerTitleAttendance>
+          <SecondSubtitle
+            title="Atendimento "
+            subtitle="Personalizado"
+            description="Todos os nossos clientes são tratados como rei e rainha, com a nossa colunaria artesanal."
+          />
+
+          <Button
+            title="Cardápio Imperial"
+            width="MD"
+            height="MD"
+          />
+        </ContainerTitleAttendance>
       </ContainerAttendance>
     </Container>
   );
