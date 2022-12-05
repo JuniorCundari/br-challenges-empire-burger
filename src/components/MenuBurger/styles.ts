@@ -1,32 +1,60 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
-  position: relative;
-`;
+export const Container = styled.section``;
 
 export const Wrapper = styled.div`
   position: relative;
+
+  @media (min-width: 945px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+export const ContainerCombo = styled.div`
+  position: relative;
+  left: -24px;
+
   width: 100vw;
 
   .banner {
-    width: 100%;
-    max-width: 600px;
+    display: block;
+    width: 100vw;
+    max-width: 700px;
+
+    @media (min-width: 700px) {
+      max-width: 945px;
+    }
   }
 `;
 
 export const ContainerMenuBurgerTitle = styled.div`
-  padding-top: 40px;
-  padding-left: 24px;
-  padding-right: 24px;
   position: absolute;
-  top: 0;
+  top: 40px;
+  left: 24px;
+
+  max-width: 280px;
+  width: 100%;
 
   div + button {
     margin-top: 16px;
   }
+
+  @media (min-width: 700px) {
+    left: 300px;
+    top: 30%;
+    left: 400px;
+  }
 `;
 
 export const ContainerMenuList= styled.div`
+  position: relative;
+  left: -24px;
+
+  width: 100vw;
+  max-height: 575px;
+
   background: ${({ theme }) => theme.colors.brown[500]};
   padding: 0 24px;
   padding-bottom: 50px;
@@ -61,6 +89,7 @@ export const ItemTitle = styled.div`
   font-size: 20px;
   color: ${({ theme }) => theme.colors.brown[100]};
   text-transform: uppercase;
+
   display: flex;
   gap: 3px;
 
@@ -84,17 +113,21 @@ export const ItemTitle = styled.div`
 `;
 
 export const ContainerAttendance = styled.div`
-  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   margin-top: 48px;
 
   .card-banner {
+    display: block;
     width: 100%;
     max-width: 570px;
   }
 `;
 
 export const ContainerTitleAttendance = styled.div`
-  padding: 0 24px;
   margin-top: 16px;
 
   border-bottom: 1px solid rgba(29, 6, 5, 0.15);

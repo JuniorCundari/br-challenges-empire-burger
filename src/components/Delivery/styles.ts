@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  position: relative;
-  top: 146px;
-
   .card-banner {
     width: 100%;
     max-width: 570px;
+    margin-bottom: 40px;
   }
 `;
 

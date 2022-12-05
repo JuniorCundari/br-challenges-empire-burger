@@ -8,14 +8,23 @@ export const Container = styled.section`
   position: relative;
 
   .banner {
+    display: block;
     width: 100vw;
     max-width: 900px;
+  }
+
+  @media (min-width: 700px) {
+    .banner {
+      max-width: 1920px;
+      height: 525px;
+    }
   }
 `;
 
 export const ContainerTitle = styled.div`
   position: absolute;
   top: 100px;
+  left: 0;
 
   span {
     color: ${({ theme }) => theme.colors.brown[900]};
@@ -59,10 +68,8 @@ export const ContainerServices = styled.div`
   position: absolute;
   bottom: -205px;
 
-  max-width: 355px;
+  max-width: 970px;
   width: 100%;
-  max-height: 323px;
-  height: 100%;
 
   padding: 26px 0;
 
@@ -78,6 +85,16 @@ export const ContainerServices = styled.div`
   & :last-child {
     border: none;
     padding-bottom: 0;
+  }
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+    bottom: -65px;
+
+    & > div {
+      border-right: 1px solid rgba(73, 46, 21, 0.15);
+      border-bottom: none;
+    }
   }
 `;
 

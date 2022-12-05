@@ -6,18 +6,18 @@ import ifood from '../../assets/icons/ifood.svg';
 import instagram from '../../assets/icons/instagram.svg';
 import whatsapp from '../../assets/icons/whatsapp.svg';
 
-import { Container } from './styles';
+import { Navigation, LinkLogo, LinkList, ContainerSocialMedia } from './styles';
 
 export function Menu({ open, setOpen }: MenuMobileProps) {
   const close = () => setOpen(false);
 
   return (
-    <Container open={open}>
-      <a href="#">
+    <Navigation>
+      <LinkLogo href="#">
         <img className="logo" src={logo} alt="Logo Empire Burger" />
-      </a>
+      </LinkLogo>
 
-      <ul>
+      <LinkList open={open}>
         <li>
           <a href="#home" onClick={() => close()}>Home</a>
         </li>
@@ -34,14 +34,14 @@ export function Menu({ open, setOpen }: MenuMobileProps) {
           <a href="#ca" onClick={() => close()}>Contato</a>
         </li>
 
-        <div className="social-media">
+        <ContainerSocialMedia>
           <a href="">
             <img src={ifood} alt="" />
           </a>
           <a href="">
             <img src={instagram} alt="" />
           </a>
-        </div>
+        </ContainerSocialMedia>
 
         <Button
           title="Contato"
@@ -49,7 +49,7 @@ export function Menu({ open, setOpen }: MenuMobileProps) {
           bg="third"
           color="third"
         />
-      </ul>
-    </Container>
+      </LinkList>
+    </Navigation>
   );
 }

@@ -18,20 +18,14 @@ export const ContainerComments = styled.div`
 
 export const ContainerCommentSocialMedia = styled.div`
   text-align: center;
-
-  position: relative;
 `;
 
 export const WrapperImagesMarquee = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   margin-top: 16px;
-  width: 100vw;
+  /* width: 100vw; */
 
-  position: absolute;
-  left: -24px;
+  /* position: relative;
+  left: -24px; */
 `;
 
 export const WrapperImages = styled.div`

@@ -1,6 +1,8 @@
 import { Subtitle } from '../Subtitle';
 
-import { Container } from './styles';
+import map from '../../assets/images/map.png';
+
+import { Container, ContainerMap } from './styles';
 
 export function Localization() {
   return (
@@ -9,6 +11,10 @@ export function Localization() {
         title="Onde fica o nosso Castelo"
         description="Estaremos de portas abertas para a nossa realeza."
       />
+
+      <ContainerMap>
+        <img src={map} alt="" />
+      </ContainerMap>
     </Container>
   );
 }

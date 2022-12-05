@@ -14,13 +14,16 @@ Para facilitar a codificação do projeto foi usado um protótipo do figma como 
 
 ## 🚀 Tecnologias
 
-- [Item 1](http://localhost:3000/)
-- [Item 2](http://localhost:3000/)
-- [Item 3](http://localhost:3000/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://reactjs.org/)
+- [Styled Components](https://styled-components.com/docs)
+- [Vite](https://vitejs.dev/)
+- [ESLint](https://eslint.org/)
+- [Yarn](https://yarnpkg.com/)
 
 ## 📝 Critérios de aceite
 
-- [ ] Criar as seguintes seções: Menu, Banner hero, Ofertas especiais, Onde fica o nosso castelo, Footer.
+- [x] Criar as seguintes seções: Menu, Banner hero, Ofertas especiais, Onde fica o nosso castelo, Footer.
 
 - [ ] Ao clicar em um item do menu, o usuário deverá ser levado para a seção correspondente.
 

@@ -4,13 +4,14 @@ import GlobalStyles from '../../assets/styles/global';
 import defaultTheme from '../../assets/styles/themes/default';
 
 import { Header } from '../Header';
-import { MainContainer } from './styles';
+import { ContentMain } from './styles';
 import { Home } from '../Home';
 import { Offers } from '../Offers';
 import { MenuBurger } from '../MenuBurger';
 import { Comments } from '../Comments';
 import { Delivery } from '../Delivery';
 import { Localization } from '../Localization';
+import { Footer } from '../Footer';
 
 function App() {
   return (
@@ -18,14 +19,15 @@ function App() {
       <GlobalStyles />
 
       <Header />
-      <MainContainer>
+      <ContentMain>
         <Home />
         <Offers />
         <MenuBurger />
         <Comments />
         <Delivery />
         <Localization />
-      </MainContainer>
+      </ContentMain>
+      <Footer />
     </ThemeProvider>
   );
 }

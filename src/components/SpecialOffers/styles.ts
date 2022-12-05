@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: grid;
+  display: flex;
   gap: 8px;
 
   position: relative;
 
-  margin-top: 16px;
+  max-width: 700px;
 
   img {
-    max-width: 379px;
+    display: block;
+    max-width: 700px;
     width: 100%;
   }
 `;
