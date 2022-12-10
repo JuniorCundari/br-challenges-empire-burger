@@ -3,19 +3,20 @@ import styled from 'styled-components';
 export const Container = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  margin-top: 280px;
+  align-items: flex-start;
 `;
 
 export const GridOffers = styled.div`
+  display: grid;
+  align-items: stretch;
+  gap: 30px;
+
   margin-top: 16px;
   margin-bottom: 38px;
 
-  @media (min-width: 700px) {
+  @media only screen and (min-width: 700px) {
     display: grid;
-    grid-template-columns: 1fr 370px;
-    gap: 30px;
+    grid-template-columns: 2fr 1fr;
 
     div:first-child {
       grid-row: 1/3;
@@ -33,9 +34,10 @@ export const WrapperOpeningHoursSocialMedia = styled.div`
 
   margin-bottom: 64px;
 
-  @media (min-width: 900px) {
+  @media only screen and (min-width: 772px) {
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     gap: 30px;
   }
 `;
@@ -56,13 +58,27 @@ export const OpeningHours = styled.section`
     border-left: 1px solid rgba(29, 6, 5, 0.4);
   }
 
-  @media (min-width: 900px) {
-    max-width: 700px;
+  @media only screen and (max-width: 400px) {
+    flex-direction: column;
+
+    div + div {
+      padding-top: 14px;
+      border-top: 1px solid rgba(29, 6, 5, 0.4);
+      padding-left: 0;
+      border-left: none;
+    }
+  }
+
+  @media only screen and (min-width: 900px) {
+    max-width: 570px;
   }
 `;
 
 export const HashtagSocialMedia = styled.div`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   .hashtag-title {
     color: ${({ theme }) => theme.colors.brown[800]};

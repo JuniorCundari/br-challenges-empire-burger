@@ -10,22 +10,47 @@ export const Container = styled.section`
   .banner {
     display: block;
     width: 100vw;
-    max-width: 900px;
-  }
+    object-fit: cover;
+    height: auto;
 
-  @media (min-width: 700px) {
-    .banner {
-      max-width: 1920px;
+    @media only screen and (min-width: 700px) {
       height: 525px;
+    }
+
+    @media only screen and (min-width: 1770px) {
+      height: 600px;
+    }
+
+    @media only screen and (min-width: 2200px) {
+      height: 660px;
+    }
+
+    @media only screen and (min-width: 2500px) {
+      height: 700px;
     }
   }
 `;
 
 export const ContainerTitle = styled.div`
   position: absolute;
-  top: 100px;
-  left: 0;
+  top: 60px;
 
+  width: 100%;
+
+  @media only screen and (min-width: 425px) {
+    top: 90px;
+  }
+
+  @media only screen and (min-width: 900px) {
+    top: 120px;
+  }
+
+  @media only screen and (min-width: 1770px) {
+    top: 180px;
+  }
+`;
+
+export const MainTitle = styled.div`
   span {
     color: ${({ theme }) => theme.colors.brown[900]};
     font-weight: 700;
@@ -44,6 +69,10 @@ export const ContainerTitle = styled.div`
   }
 
   h3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
     font-weight: 400;
     color: ${({ theme }) => theme.colors.brown[300]};
     margin-bottom: 16px;
@@ -52,8 +81,6 @@ export const ContainerTitle = styled.div`
       background: ${({ theme }) => theme.colors.yellow};
       border-radius: 5px;
       padding: 2px;
-      height: 24px;
-      width: 143px;
       color: ${({ theme }) => theme.colors.brown[800]};
     }
   }
@@ -65,13 +92,12 @@ export const ContainerServices = styled.div`
   justify-content: center;
   gap: 16px;
 
-  position: absolute;
-  bottom: -205px;
+  position: relative;
+  top: -100px;
 
-  max-width: 970px;
   width: 100%;
 
-  padding: 26px 0;
+  padding: 26px 32px;
 
   background: #fff;
   box-shadow: 0px 4px 35px rgba(179, 155, 132, 0.3);
@@ -89,11 +115,12 @@ export const ContainerServices = styled.div`
 
   @media (min-width: 900px) {
     flex-direction: row;
-    bottom: -65px;
+    top: -64px;
 
     & > div {
       border-right: 1px solid rgba(73, 46, 21, 0.15);
       border-bottom: none;
+      padding-bottom: 0;
     }
   }
 `;
@@ -103,7 +130,5 @@ export const ContainerService = styled.div`
   align-items: center;
   gap: 18px;
 
-  width: 80%;
-
-  margin-left: 36px;
+  width: 100%;
 `;

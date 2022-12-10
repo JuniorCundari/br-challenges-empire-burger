@@ -17,7 +17,13 @@ export const Container = styled.button<{bg: string, width: string, height: strin
   color: ${(props) => props.color};
   font-weight: 700;
 
+  &:hover {
+    transition: all ease-in-out 0.5s;
+    opacity: 0.7;
+  }
+
   img {
+    display: block;
     width: 24px;
     height: 24px;
   }

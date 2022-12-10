@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  .card-banner {
-    width: 100%;
-    max-width: 570px;
-    margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .delivery {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 `;
 
@@ -14,7 +18,7 @@ export const ContainerContactsDelivery = styled.div`
   justify-content: center;
   gap: 8px;
 
-  margin-top: 16px;
+  width: 100%;
 `;
 
 export const ContactDelivery = styled.div`
@@ -23,6 +27,7 @@ export const ContactDelivery = styled.div`
   gap: 14px;
 
   padding: 20px 13px;
+  width: 100%;
 
   border-radius: 10px;
   background: #fff;
@@ -31,9 +36,42 @@ export const ContactDelivery = styled.div`
     padding-left: 14px;
     border-left: 1px solid rgba(29, 6, 5, 0.4);
   }
+
+  &:hover {
+    box-shadow: 0px 4px 40px rgba(179, 155, 132, 0.5);
+    transition: all ease-in-out 0.5s;
+  }
 `;
 
 export const ContainerRequest = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  padding: 20px 25px;
+  margin-top: 64px;
+  width: 100%;
+
+  border-radius: 10px;
+  background: ${({ theme }) => theme.colors.red[100]};
+
+  button {
+    margin-top: 8px;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: 700px) {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 700px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
+
+export const ContainerRequestNow = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,20 +79,21 @@ export const ContainerRequest = styled.div`
 
   text-align: center;
 
-  padding: 20px 25px;
-  margin-top: 64px;
-
-  border-radius: 10px;
-  background: ${({ theme }) => theme.colors.red[100]};
-
   div + div {
     padding-top: 8px;
     border-top: 1px solid rgba(29, 6, 5, 0.4);
   }
 
-  button {
-    margin-top: 8px;
-    width: 100%;
-    text-transform: uppercase;
+  @media only screen and (min-width: 700px) {
+    flex-direction: row;
+    gap: 15px;
+    text-align: left;
+
+    div + div {
+      padding-top: 0;
+      border-top: none;
+      padding-left: 15px;
+      border-left: 1px solid rgba(29, 6, 5, 0.4);
+    }
   }
 `;

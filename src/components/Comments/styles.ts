@@ -17,22 +17,23 @@ export const ContainerComments = styled.div`
 `;
 
 export const ContainerCommentSocialMedia = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   text-align: center;
 `;
 
 export const WrapperImagesMarquee = styled.div`
   margin-top: 16px;
-  /* width: 100vw; */
-
-  /* position: relative;
-  left: -24px; */
+  width: 100vw;
 `;
 
 export const WrapperImages = styled.div`
   display: flex;
   justify-content: center;
 
-  width: 100%;
   overflow-x: hidden;
 
   background-color: #21201B;
@@ -53,12 +54,12 @@ export const WrapperImages = styled.div`
 `;
 
 export const Marquee = styled.div`
-  width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2px;
+
+  height: 50px;
 
   white-space: nowrap;
   overflow-x: hidden;
@@ -67,7 +68,7 @@ export const Marquee = styled.div`
 
   span {
     font-family: 'Lilita One';
-    font-size: 14px;
+    font-size: 28px;
     color: ${({ theme }) => theme.colors.brown[900]};
     text-transform: uppercase;
   }

@@ -1,23 +1,48 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
+  width: 100%;
+  max-width: 1085px;
+  margin: 0 auto;
+  padding: 0 24px;
+`;
+
+export const BoxFooter = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
-  padding: 0 24px;
+  width: 100%;
+
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(29, 6, 5, 0.15);
+
+  @media only screen and (min-width: 1050px) {
+    flex-direction: row;
+  }
 `;
 
 export const NavigationListFooter = styled.nav`
   width: 100%;
 
-  div {
-    border-top: 1px solid rgba(29, 6, 5, 0.15);
+  .social-media-footer {
+    border-right: none;
 
-    padding-top: 14px;
+    border-top: 1px solid rgba(29, 6, 5, 0.15);
+    border-bottom: 1px solid rgba(29, 6, 5, 0.15);
+
     margin-top: 14px;
     margin-bottom: 14px;
+
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    a {
+      img {
+        filter: invert(74%) sepia(57%) saturate(2396%) hue-rotate(343deg) brightness(95%) contrast(102%);
+      }
+    }
   }
 
   ul {
@@ -27,22 +52,34 @@ export const NavigationListFooter = styled.nav`
     justify-content: center;
     gap: 14px;
 
-    padding-top: 14px;
-    padding-bottom: 14px;
-
-    border-top: 1px solid rgba(29, 6, 5, 0.15);
-    border-bottom: 1px solid rgba(29, 6, 5, 0.15);
-
     li {
       a {
         font-size: 18px;
         color: ${({ theme }) => theme.colors.brown[500]};
-      }
 
-      &:hover {
-        font-weight: 700;
-        color: #000;
+        &:hover {
+          font-weight: 700;
+          color: #000;
+          transform: all ease 0.9s;
+        }
       }
+    }
+  }
+
+  @media only screen and (min-width: 1050px) {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .social-media-footer {
+      border-top: none;
+      border-bottom: none;
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    ul {
+      flex-direction: row;
     }
   }
 `;
@@ -58,5 +95,10 @@ export const Copyright = styled.div`
 
   span {
     font-size: 14px;
+    color: rgba(2, 14, 31, 0.30);
+  }
+
+  span:first-child {
+    color: rgba(2, 14, 31, 0.69);
   }
 `;

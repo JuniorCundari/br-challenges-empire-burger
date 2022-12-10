@@ -9,7 +9,7 @@ import delivery from '../../assets/icons/delivery.svg';
 import { InfoIcon } from '../InfoIcon';
 import { DescriptionService } from '../DescriptionService';
 
-import { Container, ContainerService, ContainerServices, ContainerTitle } from './styles';
+import { Container, ContainerService, MainTitle, ContainerServices, ContainerTitle } from './styles';
 
 export function Home() {
   return (
@@ -20,13 +20,16 @@ export function Home() {
       </picture>
 
       <ContainerTitle>
-        <span>Uma nova experiência!</span>
-        <h1>
-          King <strong>Burger</strong>
-        </h1>
-        <h3>
-          Para quem tem um <strong>Apetite de um REI!</strong>
-        </h3>
+        <MainTitle>
+          <span>Uma nova experiência!</span>
+          <h1>
+            King <strong>Burger</strong>
+          </h1>
+          <h3>
+            Para quem tem um <strong>Apetite de um REI!</strong>
+          </h3>
+        </MainTitle>
+
         <Button
           title="Comprar Agora"
           width="MD"

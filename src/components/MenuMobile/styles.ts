@@ -39,7 +39,7 @@ export const Container = styled.button<{ open: boolean }>`
     }
   }
 
-  @media (min-width: 901px) {
+  @media (min-width: 1050px) {
     display: none;
   }
 `;

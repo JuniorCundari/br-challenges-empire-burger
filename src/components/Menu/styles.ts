@@ -6,7 +6,7 @@ export const Navigation = styled.nav`
   justify-content: space-between;
   gap: 60px;
 
-  @media (min-width: 901px) {
+  @media (min-width: 1050px) {
     max-width: 1200px;
   }
 `;
@@ -14,8 +14,7 @@ export const Navigation = styled.nav`
 export const LinkLogo = styled.a`
   img {
     display: block;
-    width: 100%;
-    max-width: 264px;
+    max-width: 235px;
   }
 `;
 
@@ -48,16 +47,23 @@ export const LinkList = styled.ul<{open: boolean}>`
       text-transform: uppercase;
       font-weight: bold;
       letter-spacing: 0.2rem;
+
+      &:hover {
+        font-weight: 700;
+        color: #000;
+        transform: all ease 0.9s;
+      }
     }
   }
 
-  @media (min-width: 901px) {
+  @media (min-width: 1050px) {
     position: static;
     flex-direction: row;
     justify-content: flex-end;
     gap: 16px;
 
     height: 100%;
+    width: 100%;
 
     background: none;
 
@@ -78,15 +84,23 @@ export const ContainerSocialMedia = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 13px;
+  gap: 14px;
 
-  @media (min-width: 901px) {
+  a {
+    &:hover {
+      transform: scale(1) translateY(-5px);
+      transition: all ease-in 0.5s;
+      opacity: 0.7;
+    }
+  }
+
+  @media (min-width: 1050px) {
     margin-left: 84px;
     margin-bottom: 0;
     border-right: 2px solid #B50B04;
 
     a:last-child {
-      margin-right: 18px;
+      margin-right: 14px;
     }
 
     a {

@@ -6,6 +6,9 @@ export const Container = styled.div`
   justify-content: center;
   gap: 4px;
 
+  width: 100%;
+  max-width: 466px;
+
   h3 {
     text-transform: uppercase;
     font-family: 'Lilita One';

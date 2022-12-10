@@ -15,7 +15,7 @@ export const Container = styled.header`
 
   backdrop-filter: blur(5px);
 
-  @media (min-width: 901px) {
+  @media (min-width: 1050px) {
     justify-content: center;
   }
 `;

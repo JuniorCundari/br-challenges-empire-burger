@@ -1,30 +1,36 @@
 import styled from 'styled-components';
 
-export const Container = styled.section``;
+export const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 
 export const Wrapper = styled.div`
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
 
-  @media (min-width: 945px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100vw;
+
+  @media only screen and (min-width: 980px) {
+    max-height: 575px;
+    flex-wrap: nowrap;
   }
 `;
 
 export const ContainerCombo = styled.div`
   position: relative;
-  left: -24px;
-
-  width: 100vw;
+  width: 100%;
 
   .banner {
     display: block;
-    width: 100vw;
-    max-width: 700px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 
-    @media (min-width: 700px) {
-      max-width: 945px;
+    @media only screen and (min-width: 700px) {
+      height: 100%;
     }
   }
 `;
@@ -34,26 +40,21 @@ export const ContainerMenuBurgerTitle = styled.div`
   top: 40px;
   left: 24px;
 
-  max-width: 280px;
+  max-width: 300px;
   width: 100%;
 
   div + button {
     margin-top: 16px;
   }
 
-  @media (min-width: 700px) {
-    left: 300px;
+  @media only screen and (min-width: 700px) {
+    left: 40%;
     top: 30%;
-    left: 400px;
   }
 `;
 
-export const ContainerMenuList= styled.div`
-  position: relative;
-  left: -24px;
-
-  width: 100vw;
-  max-height: 575px;
+export const ContainerMenuList = styled.div`
+  width: 100%;
 
   background: ${({ theme }) => theme.colors.brown[500]};
   padding: 0 24px;
@@ -112,28 +113,13 @@ export const ItemTitle = styled.div`
   }
 `;
 
-export const ContainerAttendance = styled.div`
+export const ContainerTitleAttendance = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  gap: 20px;
 
-  margin-top: 48px;
-
-  .card-banner {
-    display: block;
-    width: 100%;
-    max-width: 570px;
-  }
-`;
-
-export const ContainerTitleAttendance = styled.div`
-  margin-top: 16px;
-
-  border-bottom: 1px solid rgba(29, 6, 5, 0.15);
-
-  div + button {
-    margin-top: 8px;
-    margin-bottom: 64px;
-  }
+  width: 100%;
+  max-width: 350px;
 `;

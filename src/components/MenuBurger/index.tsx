@@ -5,7 +5,9 @@ import bannerMenuMobile from '../../assets/images/banner-menu-mobile.png';
 import bannerMenu from '../../assets/images/banner-menu.png';
 import cardWomanEating from '../../assets/images/card-woman-eating.png';
 
-import { Container, ContainerCombo, Wrapper, ContainerMenuBurgerTitle, ContainerMenuList, MenuList, Item, ItemTitle, ContainerAttendance, ContainerTitleAttendance } from './styles';
+import { Box } from '../../assets/styles/global';
+
+import { Container, ContainerCombo, Wrapper, ContainerMenuBurgerTitle, ContainerMenuList, MenuList, Item, ItemTitle, ContainerTitleAttendance } from './styles';
 
 export function MenuBurger() {
   return (
@@ -19,7 +21,7 @@ export function MenuBurger() {
 
           <ContainerMenuBurgerTitle>
             <SecondSubtitle
-              title="Escolha o seu combo imperial,"
+              title="Escolha o seu combo imperial, "
               subtitle="Peça agora!"
               description="Temos vários tipos de pratos para a nossa realeza, fique esperto porque temos sempre promoção!"
             />
@@ -31,7 +33,6 @@ export function MenuBurger() {
             />
           </ContainerMenuBurgerTitle>
         </ContainerCombo>
-
 
         <ContainerMenuList>
           <h3>Nossa Especialidade</h3>
@@ -71,7 +72,7 @@ export function MenuBurger() {
         </ContainerMenuList>
       </Wrapper>
 
-      <ContainerAttendance>
+      <Box>
         <img className="card-banner" src={cardWomanEating} alt="Mulher comendo um lanche" />
         <ContainerTitleAttendance>
           <SecondSubtitle
@@ -86,7 +87,7 @@ export function MenuBurger() {
             height="MD"
           />
         </ContainerTitleAttendance>
-      </ContainerAttendance>
+      </Box>
     </Container>
   );
 }
