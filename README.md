@@ -25,34 +25,34 @@ Para facilitar a codificação do projeto foi usado um protótipo do figma como 
 
 - [x] Criar as seguintes seções: Menu, Banner hero, Ofertas especiais, Onde fica o nosso castelo, Footer.
 
-- [ ] Ao clicar em um item do menu, o usuário deverá ser levado para a seção correspondente.
+- [x] Ao clicar em um item do menu, o usuário deverá ser levado para a seção correspondente.
 
-- [ ] Na seção Ofertas especiais os elementos devem ser organizados com o uso da propriedade display:grid do css.
+- [x] Na seção Ofertas especiais os elementos devem ser organizados com o uso da propriedade display:grid do css.
 
-- [ ] As informações do card da oferta(nome do prato e gramagem) devem estar no html, a única imagem deve ser a foto do prato com o preço.
+- [x] As informações do card da oferta(nome do prato e gramagem) devem estar no html, a única imagem deve ser a foto do prato com o preço.
 
-- [ ] Na seção Onde fica o nosso castelo você deverá incorporar uma localização do google maps.
+- [x] Na seção Onde fica o nosso castelo você deverá incorporar uma localização do google maps.
 
 ### Nível Médio
 
-- [ ] Todos os requisitos do nivel fácil.
+- [x] Todos os requisitos do nivel fácil.
 
-- [ ] Criar as seguintes seções: Cardápio, Atendimento, Nossas entregas.
+- [x] Criar as seguintes seções: Cardápio, Atendimento, Nossas entregas.
 
-- [ ] Na seção Cardápio os preços devem ser formatados com o método Intl.NumberFormat.
+- [x] Na seção Cardápio os preços devem ser formatados com o método Intl.NumberFormat.
 
-- [ ] O card Horário de funcionamento deverá ter os estados aberto e fechado, o estado será alterado conforme o horário do navegador do usuário.
+- [x] O card Horário de funcionamento deverá ter os estados aberto e fechado, o estado será alterado conforme o horário do navegador do usuário.
 
 ### Nível Difícil
 
-- [ ] Todos os requisitos do nivel fácil e médio
+- [x] Todos os requisitos do nivel fácil e médio
 
-- [ ] Criar as seguintes seções: Nossa realeza, Publicações do instagram.
+- [x] Criar as seguintes seções: Nossa realeza, Publicações do instagram.
 
-- [ ] Buscar a lista de itens do cardápio via api.
+- [x] Buscar a lista de itens do cardápio via api.
 
-- [ ] Buscar a lista de depoimentos via api.
+- [x] Buscar a lista de depoimentos via api.
 
-- [ ] Na seção Nossa realeza os depoimentos deverão estar em um carrousel funcional.
+- [x] Na seção Nossa realeza os depoimentos deverão estar em um carrousel funcional.
 
-- [ ] O texto de cada depoimento deverá estar limitado em quatro linhas, você pode usar a propriedade clamp do css.
+- [x] O texto de cada depoimento deverá estar limitado em quatro linhas, você pode usar a propriedade clamp do css.

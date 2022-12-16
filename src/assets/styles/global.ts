@@ -5,6 +5,8 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    scroll-behavior: smooth;
   }
 
   html {
@@ -62,10 +64,10 @@ export const Box = styled.div`
   gap: 16px;
 
   width: 100%;
-  margin-top: 72px;
+  padding-top: 72px;
 
   border-bottom: 1px solid rgba(29, 6, 5, 0.15);
-  padding-bottom: 128px;
+  padding-bottom: 64px;
 
   .card-banner {
     display: block;

@@ -17,7 +17,7 @@ import { Container, ContainerContactsDelivery, ContactDelivery, ContainerRequest
 
 export function Delivery() {
   return (
-    <Container>
+    <Container id="anchor-contact">
       <Box className="delivery">
         <img className="card-banner" src={cardPhone} alt="Celular e Lanche Burger" />
 

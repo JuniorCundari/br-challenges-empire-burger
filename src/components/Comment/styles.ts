@@ -9,8 +9,8 @@ export const Container = styled.div`
   padding-right: 24px;
   margin-top: 16px;
 
+  max-height: 178px;
   max-width: 370px;
-  width: 100%;
 
   p {
     color: ${({ theme }) => theme.colors.brown[800]};
@@ -28,6 +28,13 @@ export const ContainerAvatar = styled.div`
 
   margin-top: 20px;
   padding-bottom: 15px;
+
+  img {
+    display: block;
+    width: 48.5px;
+    height: 48.5px;
+    border-radius: 100%;
+  }
 `;
 
 export const ContainerUser = styled.div`
@@ -40,11 +47,6 @@ export const ContainerUser = styled.div`
     color: ${({ theme }) => theme.colors.brown[900]};
     text-transform: uppercase;
   }
-`;
-
-export const ContainerInfo = styled.div`
-  display: flex;
-  gap: 2px;
 
   span {
     font-size: 12px;

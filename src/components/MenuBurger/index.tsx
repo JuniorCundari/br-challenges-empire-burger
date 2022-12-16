@@ -1,17 +1,39 @@
+import { useEffect, useState } from 'react';
+
 import { Button } from '../Button';
 import { SecondSubtitle } from '../SecondSubtitle';
+import { Box } from '../../assets/styles/global';
 
 import bannerMenuMobile from '../../assets/images/banner-menu-mobile.png';
 import bannerMenu from '../../assets/images/banner-menu.png';
 import cardWomanEating from '../../assets/images/card-woman-eating.png';
 
-import { Box } from '../../assets/styles/global';
+import formattedCurrency from '../../utils/formattedCurrency';
 
 import { Container, ContainerCombo, Wrapper, ContainerMenuBurgerTitle, ContainerMenuList, MenuList, Item, ItemTitle, ContainerTitleAttendance } from './styles';
 
+interface MenuBurgerProps {
+  ingredients: string;
+  plate: string;
+  price: number;
+}
+
 export function MenuBurger() {
+  const [menu, setMenu] = useState<MenuBurgerProps[]>([]);
+
+  useEffect(() => {
+    fetch('https://api.brchallenges.com/api/empire-burger/menu')
+      .then(async (response) => {
+        const json = await response.json();
+        setMenu(json);
+      })
+      .catch((error) => {
+        console.log('error', error);
+      });
+  }, []);
+
   return (
-    <Container>
+    <Container id="anchor-menu-burger">
       <Wrapper>
         <ContainerCombo>
           <picture>
@@ -37,42 +59,20 @@ export function MenuBurger() {
         <ContainerMenuList>
           <h3>Nossa Especialidade</h3>
           <MenuList>
-            <Item>
-              <ItemTitle>
-                <span>Classic Burger</span>
-                <strong>R$49,99</strong>
-              </ItemTitle>
-              <p>Hamburguer bonino 160g, Molho, Bacon, Queijo prato, peito de peru, Tomate, Alface, Servidor do pão de batata</p>
-            </Item>
-
-            <Item>
-              <ItemTitle>
-                <span>Special Big Burger</span>
-                <strong>R$49,99</strong>
-              </ItemTitle>
-              <p>Hamburguer bonino 160g, Molho, Bacon, Queijo prato, peito de peru, Tomate, Alface, Servidor do pão de batata</p>
-            </Item>
-
-            <Item>
-              <ItemTitle>
-                <span>Special Big Burger</span>
-                <strong>R$49,99</strong>
-              </ItemTitle>
-              <p>Hamburguer bonino 160g, Molho, Bacon, Queijo prato, peito de peru, Tomate, Alface, Servidor do pão de batata</p>
-            </Item>
-
-            <Item>
-              <ItemTitle>
-                <span>Mexican Burger</span>
-                <strong>R$49,99</strong>
-              </ItemTitle>
-              <p>Hamburguer bonino 160g, Molho, Bacon, Queijo prato, peito de peru, Tomate, Alface, Servidor do pão de batata</p>
-            </Item>
+            {menu.map((item, index) => (
+              <Item key={index}>
+                <ItemTitle>
+                  <span>{item.plate}</span>
+                  <strong>{formattedCurrency(item.price)}</strong>
+                </ItemTitle>
+                <p>{item.ingredients}</p>
+              </Item>
+            ))}
           </MenuList>
         </ContainerMenuList>
       </Wrapper>
 
-      <Box>
+      <Box id="anchor-attendance">
         <img className="card-banner" src={cardWomanEating} alt="Mulher comendo um lanche" />
         <ContainerTitleAttendance>
           <SecondSubtitle

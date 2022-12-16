@@ -4,6 +4,8 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  padding-top: 70px;
 `;
 
 export const GridOffers = styled.div`
@@ -42,7 +44,7 @@ export const WrapperOpeningHoursSocialMedia = styled.div`
   }
 `;
 
-export const OpeningHours = styled.section`
+export const OpeningHours = styled.section<{isOpen: boolean}>`
   display: flex;
   align-items: center;
   gap: 14px;
@@ -51,7 +53,7 @@ export const OpeningHours = styled.section`
   width: 100%;
 
   border-radius: 10px;
-  background: ${({ theme }) => theme.colors.red[100]};
+  background: ${({ isOpen, theme }) => (isOpen ? '#438b35' : theme.colors.red[100])};
 
   div + div {
     padding-left: 14px;

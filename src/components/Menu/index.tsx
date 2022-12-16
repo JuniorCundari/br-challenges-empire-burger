@@ -19,19 +19,19 @@ export function Menu({ open, setOpen }: MenuMobileProps) {
 
       <LinkList open={open}>
         <li>
-          <a href="#home" onClick={() => close()}>Home</a>
+          <a href="#anchor-home" onClick={() => close()}>Home</a>
         </li>
         <li>
-          <a href="#offer" onClick={() => close()}>Promoção</a>
+          <a href="#anchor-offer" onClick={() => close()}>Promoção</a>
         </li>
         <li>
-          <a href="#ca" onClick={() => close()}>Cardápio</a>
+          <a href="#anchor-menu-burger" onClick={() => close()}>Cardápio</a>
         </li>
         <li>
-          <a href="#ca" onClick={() => close()}>Comentário</a>
+          <a href="#anchor-attendance" onClick={() => close()}>Atendimento</a>
         </li>
         <li>
-          <a href="#ca" onClick={() => close()}>Contato</a>
+          <a href="#anchor-contact" onClick={() => close()}>Contato</a>
         </li>
 
         <ContainerSocialMedia>

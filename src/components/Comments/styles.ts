@@ -1,19 +1,43 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  margin-top: 64px;
-  margin-bottom: 40px;
+  padding-top: 70px;
 
   width: 100%;
-`;
 
-export const ContainerComments = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
+  .slick-slide {
+    & > div {
+      margin: 0 6px;
+    }
 
-  margin-bottom: 64px;
+    .slick-list .slick-track {
+      border: 2px solid red;
+      opacity: 0.6;
+    }
+  }
+
+  .slick-dots {
+    li {
+      width: 87px;
+      height: 6px;
+      background: white;
+
+      button::before {
+        color: white;
+        width: 100%;
+        top: -7px;
+      }
+    }
+
+    .slick-active {
+      background: ${({ theme }) => theme.colors.yellow};
+
+      button::before {
+        color: ${({ theme }) => theme.colors.yellow};
+        width: 100%;
+      }
+    }
+  }
 `;
 
 export const ContainerCommentSocialMedia = styled.div`
@@ -23,6 +47,8 @@ export const ContainerCommentSocialMedia = styled.div`
   justify-content: center;
 
   text-align: center;
+
+  margin-top: 64px;
 `;
 
 export const WrapperImagesMarquee = styled.div`
@@ -53,7 +79,7 @@ export const WrapperImages = styled.div`
   }
 `;
 
-export const Marquee = styled.div`
+export const ContainerMarquee = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

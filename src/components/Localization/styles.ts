@@ -15,8 +15,9 @@ export const ContainerMap = styled.div`
   margin-top: 16px;
   width: 100vw;
 
-  img {
+  iframe {
     height: 207px;
     width: 100%;
+    border: none;
   }
 `;
