@@ -64,17 +64,38 @@ export const WrapperImages = styled.div`
 
   background-color: #21201B;
 
-  img {
+  .images-instagram {
+    display: block;
+    max-width: 270px;
     width: 100%;
-    max-width: 180px;
-    max-height: 130px;
+    max-height: 180px;
 
     &:first-child {
       mask-image: linear-gradient(to left, black -97.60%, transparent 118.38%);
     }
 
     &:last-child {
-      mask-image: linear-gradient(to right, black -12.60%, transparent 60.38%);
+      mask-image: linear-gradient(to right, black -116.6%, transparent 87.38%);
+    }
+
+    @media only screen and (max-width: 430px) {
+      &:nth-child(3) {
+        mask-image: linear-gradient(to left, black -97.60%, transparent 118.38%);
+      }
+
+      &:nth-child(6) {
+        mask-image: linear-gradient(to right, black -116.6%, transparent 87.38%);
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      &:nth-child(2) {
+        mask-image: linear-gradient(to left, black -97.60%, transparent 118.38%);
+      }
+
+      &:nth-child(7) {
+        mask-image: linear-gradient(to right, black -116.6%, transparent 87.38%);
+      }
     }
   }
 `;
@@ -83,12 +104,9 @@ export const ContainerMarquee = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2px;
 
   height: 50px;
-
-  white-space: nowrap;
-  overflow-x: hidden;
+  width: 100%;
 
   background: ${({ theme }) => theme.colors.yellow};
 

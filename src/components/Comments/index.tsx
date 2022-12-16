@@ -6,9 +6,13 @@ import { Subtitle } from '../Subtitle';
 import { Comment } from '../Comment';
 
 import burgerChips from '../../assets/instagram/burger-chips.png';
-import burger from '../../assets/instagram/burger.png';
 import threeBurger from '../../assets/instagram/three-burger.png';
 import womanBurger from '../../assets/instagram/woman-burger.png';
+import burger from '../../assets/instagram/burger.png';
+import burger1 from '../../assets/instagram/burger1.png';
+import burger2 from '../../assets/instagram/burger2.png';
+import burger3 from '../../assets/instagram/burger3.png';
+import burger4 from '../../assets/instagram/burger4.png';
 
 import { Container, ContainerCommentSocialMedia, WrapperImagesMarquee, WrapperImages, ContainerMarquee } from './styles';
 import Marquee from 'react-fast-marquee';
@@ -109,10 +113,14 @@ export function Comments() {
 
         <WrapperImagesMarquee>
           <WrapperImages>
-            <img src={burgerChips} alt="" />
-            <img src={burger} alt="" />
-            <img src={threeBurger} alt="" />
-            <img src={womanBurger} alt="" />
+            <img className="images-instagram" src={burger1} alt="" />
+            <img className="images-instagram" src={burger2} alt="" />
+            <img className="images-instagram" src={burgerChips} alt="" />
+            <img className="images-instagram" src={burger} alt="" />
+            <img className="images-instagram" src={threeBurger} alt="" />
+            <img className="images-instagram" src={womanBurger} alt="" />
+            <img className="images-instagram" src={burger4} alt="" />
+            <img className="images-instagram" src={burger3} alt="" />
           </WrapperImages>
 
           <Marquee speed={40} gradient={false}>
@@ -128,7 +136,6 @@ export function Comments() {
               <span>#Empireburger &#x2022;</span>
             </ContainerMarquee>
           </Marquee>
-
         </WrapperImagesMarquee>
       </ContainerCommentSocialMedia>
     </Container>
