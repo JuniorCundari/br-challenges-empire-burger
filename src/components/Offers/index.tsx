@@ -21,59 +21,26 @@ export function Offers() {
     const hour = date.getHours();
     const minutes = date.getMinutes();
 
+    const hourMinutes = `${hour}:${minutes}`
+
     if (day >= 1 && day <= 5) {
       if (hour >= 17 && hour <= 22) {
         setTimeIsOpen(true);
-        console.log('primeiro');
       }
     }
 
     if (day === 0 || day === 6) {
-      if (hour === 18) {
-        if (minutes >= 30) {
+      if (hour >= 18) {
+        if (hourMinutes >= '18:30') {
           setTimeIsOpen(true);
-          console.log('segundo');
         }
       }
+    }
 
-      if (hour <= 22) {
-        setTimeIsOpen(true);
-        console.log('terceiro');
-      }
+    if (hour>= 23) {
+      setTimeIsOpen(false);
     }
   }, [timeIsOpen]);
-
-  // useEffect(() => {
-  //   function changeHourWithBrowser() {
-  //     const date = new Date();
-  //     const day = date.getDay();
-  //     const hour = date.getHours();
-  //     const minutes = date.getMinutes();
-
-  //     if (day >= 1 && day <= 5) {
-  //       if (hour >= 17 && hour <= 22) {
-  //         setTimeIsOpen(true);
-  //         console.log('primeiro');
-  //       }
-  //     }
-
-  //     if (day === 0 || day === 6) {
-  //       if (hour === 18) {
-  //         if (minutes >= 30) {
-  //           setTimeIsOpen(true);
-  //           console.log('segundo');
-  //         }
-  //       }
-
-  //       if (hour <= 22) {
-  //         setTimeIsOpen(true);
-  //         console.log('terceiro');
-  //       }
-  //     }
-  //   }
-
-  //   changeHourWithBrowser();
-  // }, [timeIsOpen]);
 
   return (
     <Container id="anchor-offer">
